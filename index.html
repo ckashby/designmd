@@ -193,16 +193,120 @@
     </section>
 
     <section data-page="projects" class="hidden p-4 md:p-6">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-        <p class="text-muted">Projects page coming soon...</p>
+      <div class="max-w-7xl mx-auto space-y-6">
+        <h2 class="text-2xl font-semibold">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- To Do Column -->
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-semibold text-ink dark:text-slate-100">To Do</h3>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded-full text-xs">3</span>
+            </div>
+            <div class="space-y-3 max-h-96 overflow-y-auto">
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-md cursor-grab active:scale-[0.98] transition-shadow">
+                <div class="flex items-start justify-between mb-2">
+                  <h4 class="font-medium text-sm text-ink dark:text-slate-200">Design homepage</h4>
+                  <span class="px-2 py-0.5 rounded-full text-xs font-medium bg-rose-100 text-rose-800">High</span>
+                </div>
+                <div class="flex items-center justify-between text-xs text-muted">
+                  <div class="w-6 h-6 rounded-full bg-brand-pink text-white flex items-center justify-center">AM</div>
+                  <span>Due May 20</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- In Progress Column -->
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-semibold text-ink dark:text-slate-100">In Progress</h3>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded-full text-xs">2</span>
+            </div>
+            <div class="space-y-3 max-h-96 overflow-y-auto">
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-md cursor-grab active:scale-[0.98] transition-shadow">
+                <div class="flex items-start justify-between mb-2">
+                  <h4 class="font-medium text-sm text-ink dark:text-slate-200">Build API</h4>
+                  <span class="px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">Medium</span>
+                </div>
+                <div class="flex items-center justify-between text-xs text-muted">
+                  <div class="w-6 h-6 rounded-full bg-brand-teal text-white flex items-center justify-center">BJ</div>
+                  <span>Due May 18</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Done Column -->
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-semibold text-ink dark:text-slate-100">Done</h3>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded-full text-xs">5</span>
+            </div>
+            <div class="space-y-3 max-h-96 overflow-y-auto">
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-md cursor-grab active:scale-[0.98] transition-shadow">
+                <div class="flex items-start justify-between mb-2">
+                  <h4 class="font-medium text-sm text-ink dark:text-slate-200">Setup project</h4>
+                  <span class="px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">Low</span>
+                </div>
+                <div class="flex items-center justify-between text-xs text-muted">
+                  <div class="w-6 h-6 rounded-full bg-brand-lavender text-ink flex items-center justify-center">CS</div>
+                  <span>Done</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section data-page="settings" class="hidden p-4 md:p-6">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-4">Settings</h2>
-        <p class="text-muted">Settings page coming soon...</p>
+      <div class="max-w-7xl mx-auto max-w-2xl space-y-6">
+        <h2 class="text-2xl font-semibold">Settings</h2>
+        <form id="settings-form" class="space-y-6">
+          <!-- Profile Info -->
+          <fieldset class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700">
+            <legend class="text-lg font-semibold mb-4 text-ink dark:text-slate-100">Profile Info</legend>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium mb-1 text-ink dark:text-slate-200">Name</label>
+                <input type="text" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" value="Admin User">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1 text-ink dark:text-slate-200">Email</label>
+                <input type="email" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" value="admin@example.com">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Notifications -->
+          <fieldset class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700">
+            <legend class="text-lg font-semibold mb-4 text-ink dark:text-slate-100">Notifications</legend>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium mb-1 text-ink dark:text-slate-200">Email Notifications</label>
+                <select class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  <option>All notifications</option>
+                  <option>Important only</option>
+                  <option>None</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Appearance -->
+          <fieldset class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700">
+            <legend class="text-lg font-semibold mb-4 text-ink dark:text-slate-100">Appearance</legend>
+            <div class="flex items-center justify-between py-2">
+              <span class="text-sm font-medium text-ink dark:text-slate-200">Dark Mode</span>
+              <label class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-300 peer-checked:bg-indigo-600 transition-colors cursor-pointer">
+                <input type="checkbox" id="dark-mode-checkbox" class="sr-only peer" checked>
+                <span class="inline-block h-5 w-5 rounded-full bg-white shadow transform transition-transform peer-checked:translate-x-5"></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit" id="save-settings" data-id="save-settings" class="px-6 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">Save Settings</button>
+        </form>
       </div>
     </section>
   </main>
@@ -222,8 +326,34 @@
         localStorage.setItem('dark-mode', htmlEl.classList.contains('dark') ? 'dark' : 'light');
       });
       
-      document.getElementById('sidebar-toggle').addEventListener('click', () => {
-        document.getElementById('sidebar').classList.toggle('translate-x-0');
+      const sidebarToggle = document.getElementById('sidebar-toggle');
+      const sidebar = document.getElementById('sidebar');
+      
+      sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('translate-x-0');
+      });
+
+      // Sidebar navigation
+      document.querySelectorAll('[data-page]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const page = this.getAttribute('data-page');
+          document.querySelectorAll('section[data-page]').forEach(section => {
+            section.classList.add('hidden');
+            section.classList.remove('block');
+          });
+          const target = document.querySelector(`section[data-page="${page}"]`);
+          if (target) {
+            target.classList.remove('hidden');
+            target.classList.add('block');
+          }
+          document.getElementById('page-title').textContent = page.charAt(0).toUpperCase() + page.slice(1);
+          
+          // Close sidebar on mobile after navigation
+          if (sidebar.classList.contains('translate-x-0')) {
+            sidebar.classList.remove('translate-x-0');
+          }
+        });
       });
 
       // Replace skeleton cards after 500ms
@@ -244,7 +374,43 @@
           `;
         });
       }, 500);
+
+      // Settings form functionality
+      const settingsForm = document.getElementById('settings-form');
+      const saveBtn = document.getElementById('save-settings');
+      
+      if (settingsForm) {
+        settingsForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          saveBtn.disabled = true;
+          saveBtn.innerHTML = 'Saving... <span class="animate-spin">⟳</span>';
+          
+          setTimeout(() => {
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Settings';
+            showToast('Settings saved successfully!');
+          }, 1500);
+        });
+      }
     });
+
+    function showToast(message) {
+      const toast = document.createElement('div');
+      toast.className = 'fixed bottom-4 right-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 shadow-lg transform translate-x-full transition-transform duration-300';
+      toast.textContent = message;
+      document.body.appendChild(toast);
+      
+      setTimeout(() => {
+        toast.classList.remove('translate-x-full');
+        toast.classList.add('translate-x-0');
+      }, 100);
+      
+      setTimeout(() => {
+        toast.classList.remove('translate-x-0');
+        toast.classList.add('translate-x-full');
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
   </script>
 </body>
 </html>
