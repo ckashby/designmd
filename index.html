@@ -74,9 +74,121 @@
 
   <main id="content" class="pt-16 sm:pl-64">
     <section data-page="dashboard" class="block p-4 md:p-6">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-4">Overview</h2>
-        <p class="text-muted">Welcome to your admin dashboard. Build progress continues...</p>
+      <div class="max-w-7xl mx-auto space-y-6">
+        <!-- KPI Stat Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="kpi-cards">
+          <!-- Skeleton Cards (shown initially) -->
+          <div class="skeleton-card rounded-2xl bg-white dark:bg-slate-800 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 animate-pulse">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-lg bg-slate-200 dark:bg-slate-700"></div>
+              <div class="flex-1">
+                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded mb-2 w-20"></div>
+                <div class="h-6 bg-slate-200 dark:bg-slate-700 rounded mb-1 w-12"></div>
+                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-16"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-card rounded-2xl bg-white dark:bg-slate-800 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 animate-pulse">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-lg bg-slate-200 dark:bg-slate-700"></div>
+              <div class="flex-1">
+                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded mb-2 w-20"></div>
+                <div class="h-6 bg-slate-200 dark:bg-slate-700 rounded mb-1 w-12"></div>
+                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-16"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-card rounded-2xl bg-white dark:bg-slate-800 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 animate-pulse">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-lg bg-slate-200 dark:bg-slate-700"></div>
+              <div class="flex-1">
+                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded mb-2 w-20"></div>
+                <div class="h-6 bg-slate-200 dark:bg-slate-700 rounded mb-1 w-12"></div>
+                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-16"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-card rounded-2xl bg-white dark:bg-slate-800 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 animate-pulse">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-lg bg-slate-200 dark:bg-slate-700"></div>
+              <div class="flex-1">
+                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded mb-2 w-20"></div>
+                <div class="h-6 bg-slate-200 dark:bg-slate-700 rounded mb-1 w-12"></div>
+                <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-16"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity Feed & Data Table -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Recent Activity -->
+          <div class="lg:col-span-1 bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700">
+            <h3 class="text-lg font-semibold mb-4 text-ink dark:text-slate-100">Recent Activity</h3>
+            <div class="space-y-3 max-h-64 overflow-y-auto">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-brand-pink text-white flex items-center justify-center text-sm font-medium">JD</div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-ink dark:text-slate-200"><span class="font-medium">John Doe</span> updated a project</p>
+                  <p class="text-xs text-muted dark:text-slate-400">2 minutes ago</p>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">Complete</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-brand-teal text-white flex items-center justify-center text-sm font-medium">AS</div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-ink dark:text-slate-200"><span class="font-medium">Alex Smith</span> added a comment</p>
+                  <p class="text-xs text-muted dark:text-slate-400">1 hour ago</p>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">Pending</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-brand-lavender text-ink flex items-center justify-center text-sm font-medium">MJ</div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-ink dark:text-slate-200"><span class="font-medium">Maria Johnson</span> resolved a ticket</p>
+                  <p class="text-xs text-muted dark:text-slate-400">3 hours ago</p>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200">Resolved</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Table -->
+          <div class="lg:col-span-2 bg-white dark:bg-slate-800 rounded-2xl shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 overflow-hidden">
+            <div class="p-5 border-b border-slate-200 dark:border-slate-700">
+              <h3 class="text-lg font-semibold text-ink dark:text-slate-100">Recent Orders</h3>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead class="bg-slate-50 dark:bg-slate-800/50">
+                  <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-muted dark:text-slate-400 uppercase tracking-wider cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-700">Order ID</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-muted dark:text-slate-400 uppercase tracking-wider cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-700">Customer</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-muted dark:text-slate-400 uppercase tracking-wider cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-700">Status</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-muted dark:text-slate-400 uppercase tracking-wider">Amount</th>
+                    <th class="px-6 py-3 text-right text-xs font-medium text-muted dark:text-slate-400 uppercase tracking-wider">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+                    <td class="px-6 py-4 text-sm font-medium text-ink dark:text-slate-200">#ORD-001</td>
+                    <td class="px-6 py-4 text-sm text-muted dark:text-slate-400">John Smith</td>
+                    <td class="px-6 py-4"><span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">Active</span></td>
+                    <td class="px-6 py-4 text-sm text-ink dark:text-slate-200">$125.00</td>
+                    <td class="px-6 py-4 text-right"><button class="p-1.5 rounded hover:bg-slate-200 dark:hover:bg-slate-600">✏️</button></td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+                    <td class="px-6 py-4 text-sm font-medium text-ink dark:text-slate-200">#ORD-002</td>
+                    <td class="px-6 py-4 text-sm text-muted dark:text-slate-400">Jane Doe</td>
+                    <td class="px-6 py-4"><span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">Pending</span></td>
+                    <td class="px-6 py-4 text-sm text-ink dark:text-slate-200">$89.00</td>
+                    <td class="px-6 py-4 text-right"><button class="p-1.5 rounded hover:bg-slate-200 dark:hover:bg-slate-600">✏️</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -113,6 +225,25 @@
       document.getElementById('sidebar-toggle').addEventListener('click', () => {
         document.getElementById('sidebar').classList.toggle('translate-x-0');
       });
+
+      // Replace skeleton cards after 500ms
+      setTimeout(() => {
+        document.querySelectorAll('.skeleton-card').forEach(card => {
+          card.classList.remove('animate-pulse');
+          card.innerHTML = `
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-lg bg-indigo-50 dark:bg-indigo-950 flex items-center justify-center">
+                <span class="text-indigo-600 dark:text-indigo-400 text-xl">📈</span>
+              </div>
+              <div class="flex-1">
+                <p class="text-xs text-muted dark:text-slate-400">Total Revenue</p>
+                <p class="text-2xl font-semibold text-ink dark:text-slate-100">$12,543</p>
+                <p class="text-xs text-emerald-500">▲ 12.5% from last month</p>
+              </div>
+            </div>
+          `;
+        });
+      }, 500);
     });
   </script>
 </body>
