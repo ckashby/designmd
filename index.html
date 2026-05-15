@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Modern Admin Dashboard">
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: '#0a0a0a',
+            'primary-active': '#1f1f1f',
+            ink: '#0a0a0a',
+            body: '#3a3a3a',
+            muted: '#6a6a6a',
+            canvas: '#fffaf0',
+            surface: '#faf5e8',
+            'brand-pink': '#ff4d8b',
+            'brand-teal': '#1a3a3a',
+            'brand-lavender': '#b8a4ed',
+            'brand-peach': '#ffb084',
+            'brand-ochre': '#e8b94a',
+            'brand-mint': '#a4d4c5',
+            emerald: { 500: '#10b981', 800: '#065f46' },
+            rose: { 500: '#f43f5e', 800: '#991b1b' },
+            amber: { 500: '#f59e0b', 800: '#92400e' },
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-canvas text-ink antialiased">
+  <nav id="sidebar" class="fixed inset-y-0 left-0 z-40 w-64 -translate-x-full sm:translate-x-0 transition-transform duration-200">
+    <div class="flex flex-col h-full p-4 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700">
+      <div class="mb-8">
+        <span class="text-xl font-semibold text-ink">WWorld</span>
+      </div>
+      <nav class="space-y-2">
+        <a href="#" data-page="dashboard" class="flex items-center px-3 py-2 text-sm font-medium rounded-lg hover:bg-surface text-ink">
+          <span class="mr-3">📊</span> Dashboard
+        </a>
+        <a href="#" data-page="projects" class="flex items-center px-3 py-2 text-sm font-medium rounded-lg hover:bg-surface text-ink">
+          <span class="mr-3">📁</span> Projects
+        </a>
+        <a href="#" data-page="settings" class="flex items-center px-3 py-2 text-sm font-medium rounded-lg hover:bg-surface text-ink">
+          <span class="mr-3">⚙️</span> Settings
+        </a>
+      </nav>
+    </div>
+  </nav>
+
+  <header id="topbar" class="fixed top-0 left-0 right-0 h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between px-4 sm:px-6">
+    <div class="flex items-center gap-4">
+      <button id="sidebar-toggle" class="sm:hidden p-2 rounded-lg hover:bg-surface" aria-label="Toggle sidebar">
+        <span>☰</span>
+      </button>
+      <h1 class="text-lg font-semibold text-ink" id="page-title">Dashboard</h1>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" class="p-2 rounded-lg hover:bg-surface transition-colors" aria-label="Toggle dark mode">
+        <span>🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="content" class="pt-16 sm:pl-64">
+    <section data-page="dashboard" class="block p-4 md:p-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-4">Overview</h2>
+        <p class="text-muted">Welcome to your admin dashboard. Build progress continues...</p>
+      </div>
+    </section>
+
+    <section data-page="projects" class="hidden p-4 md:p-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+        <p class="text-muted">Projects page coming soon...</p>
+      </div>
+    </section>
+
+    <section data-page="settings" class="hidden p-4 md:p-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-4">Settings</h2>
+        <p class="text-muted">Settings page coming soon...</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const htmlEl = document.documentElement;
+      const savedTheme = localStorage.getItem('dark-mode');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        htmlEl.classList.add('dark');
+      }
+      
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        htmlEl.classList.toggle('dark');
+        localStorage.setItem('dark-mode', htmlEl.classList.contains('dark') ? 'dark' : 'light');
+      });
+      
+      document.getElementById('sidebar-toggle').addEventListener('click', () => {
+        document.getElementById('sidebar').classList.toggle('translate-x-0');
+      });
+    });
+  </script>
+</body>
+</html>
